@@ -1,2 +1,3 @@
+include ':coroexecutor'
 include ':app'
 rootProject.name = "CoroExecutor"
