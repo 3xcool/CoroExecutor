@@ -21,9 +21,8 @@ import kotlinx.coroutines.flow.StateFlow
 
 @ExperimentalCoroutinesApi
 class DownloadViewModel @ViewModelInject constructor(
-  @ApplicationContext context: Context,
   private val executor: Executor,
-  @Assisted private val state: SavedStateHandle
+//  @Assisted private val state: SavedStateHandle
   ): BaseViewModel(executor) {
   
   private val delayTime = 1000L
