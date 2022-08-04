@@ -139,14 +139,13 @@ class ActivityDownload : AppCompatActivity(), AdapterView.OnItemSelectedListener
   @InternalCoroutinesApi
   @ExperimentalCoroutinesApi
   private fun subscribeObservers(){
-    viewModel.downloadInfo.observe(this, { event ->
-      event.getContentIfNotHandled().let{ download ->
-        download?.let{downAdapter.updateDownload(it)}
-      }
-    })
+    viewModel.downloadInfo.observe(this) { event ->
+        event.getContentIfNotHandled().let { download ->
+            download?.let { downAdapter.updateDownload(it) }
+        }
+    }
     
-    
-    // lifecycleScope.launchWhenStarted {
+      // lifecycleScope.launchWhenStarted {
     //   viewModel.schema.collect {schema->
     //       toaster("Schema is ${schema::class.java.simpleName}")
     //     }
