@@ -11,7 +11,8 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.CoroExecutor">
     <activity android:name=".samples.download.ActivityDownload"/>
-    <activity android:name=".MainActivity">
+    <activity android:name=".MainActivity"
+      android:exported="true">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 

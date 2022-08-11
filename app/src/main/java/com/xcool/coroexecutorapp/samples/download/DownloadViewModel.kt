@@ -1,11 +1,7 @@
 package com.xcool.coroexecutorapp.samples.download
 
-import android.content.Context
-import androidx.hilt.Assisted
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.SavedStateHandle
 import com.xcool.coroexecutor.core.CoroUtil
 import com.xcool.coroexecutor.core.Executor
 import com.xcool.coroexecutor.core.ExecutorSchema
@@ -14,13 +10,15 @@ import com.xcool.coroexecutorapp.app.AppLogger
 import com.xcool.coroexecutorapp.samples.download.model.Download
 import com.xcool.coroexecutorapp.samples.download.model.DownloadState
 import com.xcool.coroexecutorapp.utils.BaseViewModel
-import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
+import javax.inject.Inject
 
 @ExperimentalCoroutinesApi
-class DownloadViewModel @ViewModelInject constructor(
+@HiltViewModel
+class DownloadViewModel @Inject constructor(
   private val executor: Executor,
 //  @Assisted private val state: SavedStateHandle
   ): BaseViewModel(executor) {

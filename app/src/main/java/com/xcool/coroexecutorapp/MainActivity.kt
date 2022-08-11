@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.xcool.coroexecutorapp.databinding.ActivityMainBinding
 import com.xcool.coroexecutorapp.samples.download.ActivityDownload
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
   
   private var _binding: ActivityMainBinding? = null
